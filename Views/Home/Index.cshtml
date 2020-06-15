@@ -1,0 +1,37 @@
+﻿@using FormSubmission.Models
+@model User
+
+<h3>Enter your Information</h3>
+
+<form asp-action="Create" asp-controller="Home" method="POST">
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="text" asp-for="FirstName" id="FirstName">
+            <label asp-for="FirstName"></label>
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div class="input-field col s12">
+            <input type="text" asp-for="LastName" id="LastName">
+            <label asp-for="LastName">Last Name</label>
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div class="input-field col s12">
+            <input type="text" asp-for="Age" id="Age">
+            <label asp-for="Age"></label>
+            <span asp-validation-for="Age"></span>
+        </div>
+        <div class="input-field col s12">
+            <input type="text" asp-for="Email" id="Email">
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="input-field col s12">
+            <input type="password" asp-for="Password" id="Password">
+            <label asp-for="Password"></label>
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="input-field col s12">
+            <button class="waves-effect waves-light btn" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
